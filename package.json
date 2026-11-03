@@ -1,0 +1,1 @@
+{"name":"mategenio","version":"0.2.0","private":true,"type":"module","scripts":{"test":"node tests/engine.test.js","start":"python3 -m http.server 8000 --bind 127.0.0.1"}}
