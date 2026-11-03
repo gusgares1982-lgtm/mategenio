@@ -1,6 +1,6 @@
 # Arquitectura, decisiones y privacidad
 
-Aplicación estática sin framework ni proceso de build. Rutas relativas compatibles con GitHub Pages. `app.js` controla vistas y eventos; `engine.js` describe las misiones y calcula resultados/recomendación; `storage.js` valida y persiste; `styles.css` contiene tokens y componentes. Ningún secreto o código de servidor.
+Aplicación estática sin framework ni proceso de build. Rutas relativas compatibles con GitHub Pages. `app.js` controla vistas y eventos; `engine.js` describe las misiones y calcula resultados/recomendación; `storage.js` valida y persiste; `styles.css` contiene tokens y componentes. `art.js` define SVG reutilizables y `components.js` el sendero, las escenas y las pistas ilustradas. Ningún secreto o código de servidor.
 
 ## Persistencia
 
@@ -12,7 +12,7 @@ El adaptador de almacenamiento permite sustituir localStorage por un repositorio
 
 ## Decisiones pedagógicas automáticas actuales
 
-Seis misiones fijas, en orden. Se comprueba igualdad con la solución definida. Al segundo intento se ofrece la explicación explícita; una pista solicitada se registra. Una competencia se marca explorada cuando se resuelve; cada resolución actualiza su último resultado, sin historial por sesión. La recomendación familiar selecciona la primera competencia con pista o más de un intento; si no existe, propone contar cubiertos. No hay adaptación de dificultad, repaso espaciado, evaluación inicial ni inferencia de dominio en esta fase.
+Seis misiones fijas, en orden. Se comprueba igualdad con la solución definida. Al segundo intento fallido se ofrece y registra ayuda con la explicación y su dibujo; una pista solicitada también se registra. Una competencia se marca explorada cuando se resuelve; cada resolución actualiza su último resultado, sin historial por sesión. La recomendación familiar selecciona la primera competencia con pista o más de un intento; si no existe, propone contar cubiertos. No hay adaptación de dificultad, repaso espaciado, evaluación inicial ni inferencia de dominio en esta fase.
 
 ## Offline y seguridad
 

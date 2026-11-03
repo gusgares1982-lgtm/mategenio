@@ -13,7 +13,7 @@ node tests/engine.test.js
 
 El servidor se ejecuta desde la raíz del repositorio. Abrir el puerto local en el navegador de desarrollo. Los módulos JavaScript y el service worker requieren HTTP local o HTTPS; no abrir directamente `index.html` desde el sistema de archivos.
 
-Prueba de navegador: con Python Playwright y Chromium instalados, y el servidor activo, ejecutar `python3 tests/browser.py`. Usa `/usr/bin/chromium` y escribe capturas fuera del repositorio, en `/workspace/artifacts`. No modifica el progreso de un navegador personal. Regenera los iconos PNG desde el SVG original.
+Prueba de navegador: con Python Playwright y Chromium instalados, y el servidor activo, ejecutar `python3 tests/browser.py`, `python3 tests/resilience.py` y `python3 tests/craft.py`. Usa `/usr/bin/chromium` y escribe capturas fuera del repositorio, en `/workspace/artifacts`. No modifica el progreso de un navegador personal. No regenera ni modifica los iconos del proyecto.
 
 ## Entrega
 

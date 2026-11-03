@@ -34,6 +34,15 @@ Espaciado: base de 4px, separación entre módulos 18–32px, márgenes de pági
 
 ## Calidad y accesibilidad
 
-Objetivos: controles de al menos 44px, foco visible, ausencia de scroll horizontal a 390/834/1194px, texto principal con contraste WCAG AA, reducción de movimiento, sonido desactivado inicialmente. Separadores no transmiten información por sí solos. Manzanas y amigos usan emoji nativo: su aspecto depende del sistema; el paisaje y Niko sí tienen arte consistente. Sustituirlos por ilustraciones propias es un refinamiento pendiente.
+Objetivos: controles de al menos 44px, foco visible, ausencia de scroll horizontal a 390/834/1194px, texto principal con contraste WCAG AA, reducción de movimiento, sonido desactivado inicialmente. Separadores no transmiten información por sí solos. Las manzanas, luciérnagas, Niko e iconos del juego son SVG originales y no dependen de emoji del sistema. La práctica clásica conserva su apariencia anterior.
 
 La lectura usa `speechSynthesis`; depende de las voces instaladas y puede necesitar conexión según el sistema. No es un audio pregrabado ni se promete voz offline. Pendientes pruebas reales con VoiceOver, niños que no leen y Safari en iPad.
+
+
+## Revisión de acabado · 3 de noviembre de 2026
+
+La portada presenta una aventura real y un sendero de seis paradas calculado desde el progreso guardado. La parada actual permite continuar y las completadas se identifican por texto y marca de verificación. Se retiran las tarjetas de mundos futuros para centrar la entrada en contenido jugable.
+
+La escena de picnic separa manzanas disponibles y recogidas en dos superficies. Cada manzana es un botón con nombre accesible; los ajustes +/− se conservan como alternativa. El toque mueve una unidad, sin precisión de arrastre ni temporizador. El marco, el enunciado, el contador vivo y los botones de ajuste se mantienen montados al manipular objetos. Las animaciones son breves y se anulan con reducción de movimiento.
+
+Las pistas muestran agrupaciones distintas según el concepto: 3+2, siete con tres tachadas, tres parejas, cantidades comparadas y saltos +2. Se recuperan al volver a abrir la sesión. Los iconos SVG tienen tamaño y trazo compartidos. En 320px la escena se apila para mantener controles de 44px; entre 390px y escritorio se muestran las dos superficies juntas.

@@ -20,3 +20,13 @@ No hay suite preexistente. No hay evaluación de eficacia pedagógica, pruebas d
 ## Revisión antes de lanzamiento
 
 Revisión docente de retos y explicaciones; observación con familias; accesibilidad en dispositivos reales; política de privacidad del alojamiento; estrategia de actualizaciones PWA y recuperación de datos; revisión legal y operación antes de cobrar. No se ha desplegado a producción.
+
+
+## Revisión de interacción y acabado
+
+- `python3 tests/craft.py`: recoge y devuelve manzanas por toque directo; conserva el marco y los controles; comprueba foco de teclado, contador, ayudas ilustradas, recuperación offline de ayudas, barra de progreso y estado del sendero. Comprueba las seis escenas con texto grande a 834, 390 y 320px, sin desbordamiento y con controles visibles de al menos 44×44px. Comprueba reducción de movimiento. Sin errores JavaScript de página.
+- Suites anteriores de lógica, partida completa y resiliencia ejecutadas de nuevo tras el cambio.
+- Nuevas capturas: `mategenio-home.png`, `mategenio-adventure.png` y `mategenio-scene-0.png`, `mategenio-scene-2.png`, `mategenio-scene-4.png` en `/workspace/artifacts`.
+- Se incrementa la caché del service worker a `mategenio-v2-2` y se incluyen los nuevos módulos y SVG para conservar el funcionamiento offline.
+
+La petición de trabajo cada hora no está programada: esta sesión no dispone de una herramienta de ejecución recurrente. No se ha instalado un cron, un proceso de agente permanente o una tarea de despliegue automático.

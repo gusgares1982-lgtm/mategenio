@@ -1,24 +1,19 @@
 """Run with a local server on port 8000: python3 tests/browser.py."""
 from pathlib import Path
 from playwright.sync_api import sync_playwright
-import json,re
+import re
 ROOT=Path(__file__).resolve().parents[1]
 with sync_playwright() as pw:
     browser=pw.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
     context=browser.new_context(viewport={'width':1194,'height':834},device_scale_factor=1,has_touch=True)
     page=context.new_page();errors=[]
     page.on('pageerror',lambda e:errors.append(str(e)))
-    # Render our own vector as PNG icons for installation and iOS.
-    for size in [192,512]:
-        page.set_viewport_size({'width':size,'height':size})
-        page.goto('http://127.0.0.1:8000/assets/icon.svg')
-        page.screenshot(path=str(ROOT/f'assets/icon-{size}.png'))
     page.set_viewport_size({'width':1194,'height':834})
     page.goto('http://127.0.0.1:8000/')
     page.evaluate('navigator.serviceWorker.ready')
     Path('/workspace/artifacts').mkdir(exist_ok=True)
     page.screenshot(path='/workspace/artifacts/mategenio-home.png',full_page=True)
-    assert page.locator('h1').inner_text().startswith('Grandes aventuras.')
+    assert page.locator('h1').inner_text().startswith('El bosque')
     page.get_by_role('button',name='¡Vamos a explorar!').click()
     # Wrong answers offer another attempt; hint usage is saved.
     page.get_by_role('button',name='Comprobar').click()
@@ -57,7 +52,7 @@ with sync_playwright() as pw:
     page.get_by_role('button',name='Volver a la aventura').click();page.reload()
     assert page.locator('body').evaluate('(el)=>el.classList.contains("large-text")')
     # Offline reload, including the app modules and legacy practice.
-    context.set_offline(True);page.reload();page.get_by_role('button',name='¡Vamos a explorar!').click()
+    context.set_offline(True);page.reload();page.get_by_role('button',name='Volver a explorar').click()
     assert page.locator('#mission-title').inner_text()=='Un picnic para los amigos'
     context.set_offline(False)
     # Responsive layouts and touch target audit.

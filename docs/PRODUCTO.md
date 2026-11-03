@@ -8,7 +8,7 @@ El repositorio contenía README y un HTML de 8,7 KB: diez preguntas aleatorias, 
 
 Un mundo completo con entrada, mapa, seis escenas conectadas por un picnic con Niko, manipulación por toque, ayuda, feedback, recompensa, colección y persistencia. El mundo tiene contenido fijo deliberado: primero validar la experiencia y la comprensión, después ampliar variaciones. La barrera familiar es una separación ligera, no autenticación. No hay menores registrados ni seguimiento remoto.
 
-El mapa presenta dos mundos futuros claramente como próximos; no son contenido desbloqueable ni promesas de compra. La hoja se obtiene por terminar, independientemente de los intentos. No hay rachas, vidas, presión de tiempo o recompensas aleatorias. El resumen familiar distingue exploración y ayuda; no afirma dominio ni mide rapidez.
+El mapa presenta las seis paradas reales de la aventura y su estado de progreso; los mundos futuros se reservan para la planificación. La hoja se obtiene por terminar, independientemente de los intentos. No hay rachas, vidas, presión de tiempo o recompensas aleatorias. El resumen familiar distingue exploración y ayuda; no afirma dominio ni mide rapidez.
 
 ## Siguiente trabajo priorizado
 

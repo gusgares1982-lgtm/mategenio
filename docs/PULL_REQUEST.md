@@ -13,6 +13,13 @@ Incluye identidad visual e ilustraciones propias, módulos de actividades y pers
 
 ## Límites y revisión
 
-No se ha probado Safari ni un iPad físico; pendientes VoiceOver y validación con familias. Voz y emoji dependen del sistema. No hay adaptación pedagógica, perfiles, sincronización, pagos ni declaración de cumplimiento jurídico. Son fases siguientes documentadas, no funciones simuladas.
+No se ha probado Safari ni un iPad físico; pendientes VoiceOver y validación con familias. La voz depende del sistema; el nuevo juego usa ilustraciones SVG propias. No hay adaptación pedagógica, perfiles, sincronización, pagos ni declaración de cumplimiento jurídico. Son fases siguientes documentadas, no funciones simuladas.
 
 Sitio estático apto para un subdirectorio de GitHub Pages. No añade automatización de despliegue ni publica producción. Revisar diseño, explicaciones pedagógicas y privacidad antes de aprobar. Documentación completa en `docs/`.
+
+
+## Segunda revisión: interacción y acabado
+
+La portada da acceso a las seis paradas reales y recupera el punto actual. El picnic permite recoger y devolver manzanas por toque, con dibujo propio, controles persistentes y ayudas visuales según el concepto. Nuevos retrato de Niko, luciérnagas e iconos, ajustes de tipografía y composición, río ilustrado y ausencia de emoji en las actividades nuevas.
+
+Nueva regresión de interacción en `tests/craft.py`: manipulación directa, foco estable, recuperación offline de pistas, reducción de movimiento, estado del sendero y las seis escenas con texto grande a 834/390/320px. Todas las suites anteriores vuelven a pasar. No se programa trabajo autónomo cada hora: no hay herramienta recurrente disponible en este entorno.
