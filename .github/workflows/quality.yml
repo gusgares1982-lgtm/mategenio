@@ -1,0 +1,40 @@
+name: MateGenio quality gate
+
+on:
+  push:
+    branches:
+      - main
+      - feat/**
+      - automation/**
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  logic-and-syntax:
+    name: Logic tests and JavaScript syntax
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check JavaScript syntax
+        shell: bash
+        run: |
+          set -euo pipefail
+          while IFS= read -r -d '' file; do
+            node --check "$file"
+          done < <(find src tests -type f -name '*.js' -print0)
+          node --check sw.js
+      - name: Run educational engine tests
+        run: npm test
